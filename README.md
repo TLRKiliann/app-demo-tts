@@ -131,7 +131,7 @@ pip freeze > requirements.txt
 		--output-path ./last_test.wav
 ```
 
-### Defaults options
+**⚡ Defaults options**
 
 - Quelle longeur de texte assure un rendu optimal avec Pocket TTS ? 
 
