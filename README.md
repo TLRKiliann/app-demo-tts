@@ -2,7 +2,7 @@
 
 Ce projet démontre la puissance de `pocket-tts`. 
 
-`https://github.com/kyutai-labs/pocket-tts`
+[https://github.com/kyutai-labs/pocket-tts](https://github.com/kyutai-labs/pocket-tts)
 
 Special thanks to :
 
