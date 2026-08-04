@@ -52,9 +52,9 @@ pocket-tts serve --host "localhost" --port 8080 --language french_24l
 
 ## Install
 
-```
-# Simple installation
+### Simple installation
 
+```
 python3 -m venv pocket_env
 
 source pocket_env/bin/activate
@@ -62,11 +62,13 @@ source pocket_env/bin/activate
 git clone https://github.com/TLRKiliann/app-demo-tts.git
 
 pip install -r requirements.txt
+```
 
 ---
 
-# Complete installation
+### Complete installation
 
+```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 pip install pocket-tts
@@ -85,7 +87,7 @@ pip freeze > requirements.txt
 
 ## Huggingface
 
-You need to install it for making a clone of your voice !
+- You need to install it to generate a clone of your voice !
 
 `pip install huggingface-hub`
 
@@ -118,15 +120,15 @@ You need to install it for making a clone of your voice !
 		--output-path ./last_test.wav
 ```
 
-## Defaults options
+### Defaults options
 
 - Quelle longeur de texte assure un rendu optimal avec Pocket TTS ? 
 
-> 1 à 3 phrases (100-255 caracters)
+> 1-3 phrases (100-255 caracters)
 
 - Quelle durée d'enregistrement assure un clonage de voix optimal avec Pocket TTS ?
 
-> 20 à 30 secondes (clean & without noise)
+> 20-30 sec (clean & without noise)
 
     --config CONFIG_PATH: Path to custom config.yaml (for loading local model files). 
       Incompatible with --language.
@@ -146,7 +148,7 @@ You need to install it for making a clone of your voice !
 
 ## Uninstall PyTorch & Pocket TTS
 
-`pip uninstall -y torch torchvision torchaudio pocket-tts`
+`pip uninstall -y torch torchvision torchaudio pocket-tts torchao`
 
 ---
 
