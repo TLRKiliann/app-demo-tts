@@ -45,11 +45,11 @@ pocket-tts serve --host "localhost" --port 8080 --language french_24l
 
 ## Install
 
-J'utilise `pip` ci-dessous, mais vous pouvez vérifier avec :
+J'utilise `pip` ci-dessous pour les installations, mais vous pouvez vérifier avec :
 
 `pip -V` 
 
-si pip pointe vers `pyhton3`, autrement utiliser `pip3`, plus moderne.
+Si `pip` pointe vers `pyhton3` c'est bon, sinon utilisez `pip3`, plus moderne et sans ambiguïté.
 
 ### Simple installation
 
