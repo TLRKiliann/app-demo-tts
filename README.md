@@ -1,10 +1,16 @@
-# Demo IA Simple Clone
+# Demo tts (text to speech)
+
+- :python: pocket-tts
 
 Ce projet démontre la puissance de `pocket-tts`. 
 
 [https://github.com/kyutai-labs/pocket-tts](https://github.com/kyutai-labs/pocket-tts)
 
-## App voice_cloner.py
+---
+
+## 🚀 Utilisation
+
+**voice_cloner.py**
 
 Fichier python maléable à souhait pour optimiser une voix clonée en fonction des besoins.
 Le rendu en mode standard est très bon.
@@ -31,7 +37,7 @@ mon_fichier_original.safetensors   # Voice sample (improve quality)
 mon_fichier_original_generated.wav # Final result
 ```
 
-## To generate with server
+## ✨ To generate with server
 
 ```
 # Default params => localhost:8000
@@ -111,7 +117,7 @@ pip freeze > requirements.txt
 
 ---
 
-## Params
+## 🎛️ Params
 
 [https://kyutai-labs.github.io/pocket-tts/CLI%20Commands/generate/](https://kyutai-labs.github.io/pocket-tts/CLI%20Commands/generate/)
 
