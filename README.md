@@ -1,19 +1,12 @@
-# Pocket TTS Simple Clone
+# Demo IA Simple Clone
 
 Ce projet démontre la puissance de `pocket-tts`. 
 
 [https://github.com/kyutai-labs/pocket-tts](https://github.com/kyutai-labs/pocket-tts)
 
-Special thanks to :
-
-```
-# Authors
-Manu Orsini*, Simon Rouard*, Gabriel De Marmiesse*, Václav Volhejn, Neil Zeghidour, Alexandre Défossez
-```
-
 ## App voice_cloner.py
 
-Fichier python maléable à souhait pour optimiser en fonction des besoins.
+Fichier python maléable à souhait pour optimiser une voix clonée en fonction des besoins.
 Le rendu en mode standard est très bon.
 
 ```
@@ -106,7 +99,7 @@ pip freeze > requirements.txt
 
 ## Params
 
-`https://kyutai-labs.github.io/pocket-tts/CLI%20Commands/generate/`
+[https://kyutai-labs.github.io/pocket-tts/CLI%20Commands/generate/](https://kyutai-labs.github.io/pocket-tts/CLI%20Commands/generate/)
 
 ```
 	pocket-tts generate 
@@ -149,6 +142,15 @@ pip freeze > requirements.txt
 ## Uninstall PyTorch & Pocket TTS
 
 `pip uninstall -y torch torchvision torchaudio pocket-tts torchao`
+
+---
+
+## Special thanks to :
+
+```
+# Authors
+Manu Orsini*, Simon Rouard*, Gabriel De Marmiesse*, Václav Volhejn, Neil Zeghid>
+```
 
 ---
 
