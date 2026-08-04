@@ -1,18 +1,20 @@
 # Pocket TTS Simple Clone
 
-Special thanks to :
+Ce projet démontre la puissance de `pocket-tts`. 
 
 `https://github.com/kyutai-labs/pocket-tts`
 
+Special thanks to :
+
 ```
-Authors
+# Authors
 Manu Orsini*, Simon Rouard*, Gabriel De Marmiesse*, Václav Volhejn, Neil Zeghidour, Alexandre Défossez
 ```
 
 ## App voice_cloner.py
 
 Fichier python maléable à souhait pour optimiser en fonction des besoins.
-Le rendu en mode standard très bon.
+Le rendu en mode standard est très bon.
 
 ```
 # Utilisation standard
@@ -36,7 +38,7 @@ mon_fichier_original.safetensors   # Voice sample (improve quality)
 mon_fichier_original_generated.wav # Final result
 ```
 
-- On peut aussi utiliser le serveur :
+## To generate with server
 
 ```
 # Default params => localhost:8000
@@ -50,21 +52,34 @@ pocket-tts serve --host "localhost" --port 8080 --language french_24l
 
 ## Install
 
-`python3 -m venv pocket_env`
+```
+# Simple installation
 
-`source pocket_env/bin/activate`
+python3 -m venv pocket_env
 
-`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu`
+source pocket_env/bin/activate
 
-`pip install pocket-tts`
+git clone https://github.com/TLRKiliann/app-demo-tts.git
 
-- To verify
+pip install -r requirements.txt
 
-`python -c "import pocket_tts; print('OK')"`
+---
 
-- Freeze requirements
+# Complete installation
 
-`pip freeze > requirements.txt`
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+pip install pocket-tts
+
+# PyTorch 2.10+
+pip install pocket-tts[quantize]
+
+# To verify
+python -c "import pocket_tts; print('OK')"
+
+# Freeze requirements
+pip freeze > requirements.txt
+```
 
 ---
 
