@@ -1,4 +1,4 @@
-# Demo tts (text to speech)
+# 🎤 Demo tts (text to speech)
 
 Ce projet démontre la puissance de `pocket-tts`. 
 
