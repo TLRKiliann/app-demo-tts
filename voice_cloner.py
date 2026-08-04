@@ -61,6 +61,7 @@ def generate_speech(voice_path, text, language, temperature, lsd_steps, output_p
     import subprocess
     cmd = [
         "pocket-tts", "generate",
+	"--quantize",
         "--text", text,
         "--voice", voice_path,
         "--language", language,
