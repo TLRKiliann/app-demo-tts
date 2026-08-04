@@ -1,7 +1,5 @@
 # Demo tts (text to speech)
 
-- pocket-tts
-
 Ce projet démontre la puissance de `pocket-tts`. 
 
 [https://github.com/kyutai-labs/pocket-tts](https://github.com/kyutai-labs/pocket-tts)
@@ -159,7 +157,7 @@ pip freeze > requirements.txt
 
 ---
 
-## Uninstall PyTorch & Pocket TTS
+## 🗑️ Uninstall
 
 `pip uninstall -y torch torchvision torchaudio pocket-tts torchao`
 
