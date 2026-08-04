@@ -1,4 +1,4 @@
-# Pocket TTS Clone App
+# Pocket TTS Simple Clone
 
 Special thanks to :
 
