@@ -97,9 +97,11 @@ You need to install it for making a clone of your voice !
 
 - Quelle longeur de texte assure un rendu optimal avec Pocket TTS ? 
 
-- Quelle longeur de phrase assure un clonage de voix optimal avec Pocket TTS ?
+> 1 à 3 phrases (100-255 caracters)
 
-    10-30sec d'enregistrement.
+- Quelle durée d'enregistrement assure un clonage de voix optimal avec Pocket TTS ?
+
+> 20 à 30 secondes (clean & without noise)
 
     --config CONFIG_PATH: Path to custom config.yaml (for loading local model files). 
       Incompatible with --language.
