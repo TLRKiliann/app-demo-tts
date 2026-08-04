@@ -58,12 +58,6 @@ mon_fichier_original_generated.wav # Final result
 
 ---
 
-## Uninstall PyTorch & Pocket TTS
-
-`pip uninstall -y torch torchvision torchaudio pocket-tts`
-
----
-
 ## Huggingface
 
 You need to install it for making a clone of your voice !
@@ -123,3 +117,12 @@ You need to install it for making a clone of your voice !
 
 ---
 
+## Uninstall PyTorch & Pocket TTS
+
+`pip uninstall -y torch torchvision torchaudio pocket-tts`
+
+---
+
+Enjoy it !
+
+koala :koala:
