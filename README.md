@@ -36,6 +36,16 @@ mon_fichier_original.safetensors   # Voice sample (improve quality)
 mon_fichier_original_generated.wav # Final result
 ```
 
+- On peut aussi utiliser le serveur :
+
+```
+# Default params => localhost:8000
+pocket-tts serve --language french_24l
+
+# Otherwise
+pocket-tts serve --host "localhost" --port 8080 --language french_24l
+```
+
 ---
 
 ## Install
