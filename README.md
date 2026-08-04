@@ -1,6 +1,6 @@
 # Demo tts (text to speech)
 
-- :python: pocket-tts
+- pocket-tts
 
 Ce projet démontre la puissance de `pocket-tts`. 
 
@@ -10,7 +10,7 @@ Ce projet démontre la puissance de `pocket-tts`.
 
 ## 🚀 Utilisation
 
-**voice_cloner.py**
+App :snake: => **voice_cloner.py**
 
 Fichier python maléable à souhait pour optimiser une voix clonée en fonction des besoins.
 Le rendu en mode standard est très bon.
@@ -49,7 +49,7 @@ pocket-tts serve --host "localhost" --port 8080 --language french_24l
 
 ---
 
-## Install
+## 📦 Install
 
 J'utilise `pip` ci-dessous pour les installations, mais vous pouvez vérifier avec :
 
@@ -86,7 +86,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 pip install pocket-tts
 
-# Ok if version of PyTorch 2.10+
+# ⚠️ Version of PyTorch 2.10+ ⚠️
 pip install pocket-tts[quantize]
 
 # To verify
@@ -98,7 +98,7 @@ pip freeze > requirements.txt
 
 ---
 
-## Huggingface
+## 🤗 Huggingface
 
 - You need to install it to generate a clone of your voice !
 
@@ -165,7 +165,7 @@ pip freeze > requirements.txt
 
 ---
 
-## Special thanks to :
+## 🙏 Special thanks to :
 
 ```
 # Authors
