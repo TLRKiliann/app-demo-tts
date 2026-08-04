@@ -1,1 +1,72 @@
+# Environnement virtuel
 pocket_env/
+secretwav/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Fichiers audio générés
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# Fichiers de modèles volumineux
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.h5
+*.ckpt
+*.bin
+*.model
+
+# Fichiers de données
+*.db
+*.sqlite
+*.sqlite3
+
+# IDEs et éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+*.temp
+
+# Variables d'environnement
+.env
+.env.local
+.env.*.local
+
+# Fichiers de cache
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Fichiers de téléchargement ou temporaires
+downloads/
+temp/
+tmp/
+
+# Notebooks Jupyter (si vous en utilisez)
+.ipynb_checkpoints/
+*.ipynb
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
