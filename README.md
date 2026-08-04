@@ -45,10 +45,18 @@ pocket-tts serve --host "localhost" --port 8080 --language french_24l
 
 ## Install
 
+J'utilise `pip` ci-dessous, mais vous pouvez vérifier avec :
+
+`pip -V` 
+
+si pip pointe vers `pyhton3`, autrement utiliser `pip3`, plus moderne.
+
 ### Simple installation
 
 ```
 python3 -m venv pocket_env
+
+cd pocket_env
 
 source pocket_env/bin/activate
 
@@ -62,11 +70,17 @@ pip install -r requirements.txt
 ### Complete installation
 
 ```
+python3 -m venv pocket_env
+
+cd pocket_env
+
+source pocket_env/bin/activate
+
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 pip install pocket-tts
 
-# PyTorch 2.10+
+# Ok if version of PyTorch 2.10+
 pip install pocket-tts[quantize]
 
 # To verify
