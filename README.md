@@ -60,8 +60,6 @@ Si `pip` pointe vers `pyhton3` c'est bon, sinon utilisez `pip3`, plus moderne et
 ```
 python3 -m venv pocket_env
 
-cd pocket_env
-
 source pocket_env/bin/activate
 
 git clone https://github.com/TLRKiliann/app-demo-tts.git
@@ -75,8 +73,6 @@ pip install -r requirements.txt
 
 ```
 python3 -m venv pocket_env
-
-cd pocket_env
 
 source pocket_env/bin/activate
 
