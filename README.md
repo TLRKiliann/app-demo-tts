@@ -26,6 +26,9 @@ python3 faster_loading.py
 
 Fichier python maléable à souhait pour optimiser une voix clonée en fonction des besoins.
 
+Grâce à ce lien: [https://podcast.adobe.com/en/enhance](https://podcast.adobe.com/en/enhance) 
+l'échantillon vocal de base peut être nettoyé et l'option `--quantize` vient optimiser la qualité du rendu.
+
 Le fichier `voice_cloner` en python permet d'optimiser la qualité de la voix clonée, 
 grâce aux différentes options de la commande de pocket-tts :
 
@@ -53,7 +56,7 @@ mon_fichier_original.safetensors   # Voice sample (improve quality)
 mon_fichier_original_generated.wav # Final result
 ```
 
-## ✨ To generate with server
+## ✨ Générer une voix clonée avec le server
 
 ```
 # Default params => localhost:8000
@@ -65,7 +68,7 @@ pocket-tts serve --host "localhost" --port 8080 --language french_24l
 
 ---
 
-## 📦 Install
+## 📦 Installation
 
 J'utilise `pip` ci-dessous pour les installations, mais vous pouvez vérifier avec :
 
@@ -73,7 +76,7 @@ J'utilise `pip` ci-dessous pour les installations, mais vous pouvez vérifier av
 
 Si `pip` pointe vers `pyhton3` c'est bon, sinon utilisez `pip3`, plus moderne et sans ambiguïté.
 
-### Simple installation
+### Installation simple
 
 ```
 python3 -m venv pocket_env
@@ -87,7 +90,7 @@ pip install -r requirements.txt
 
 ---
 
-### Complete installation
+### Installation complète
 
 ```
 python3 -m venv pocket_env
@@ -99,7 +102,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install pocket-tts
 
 # ⚠️ Version of PyTorch 2.10+ ⚠️
-pip install pocket-tts[quantize]
+pip install pocket-tts[quantize] # Améliore la qualité !!!
 
 # To verify
 python -c "import pocket_tts; print('OK')"
@@ -129,7 +132,7 @@ pip freeze > requirements.txt
 
 ---
 
-## 🎛️ Params
+## 🎛️ Options et paramètres
 
 [https://kyutai-labs.github.io/pocket-tts/CLI%20Commands/generate/](https://kyutai-labs.github.io/pocket-tts/CLI%20Commands/generate/)
 
