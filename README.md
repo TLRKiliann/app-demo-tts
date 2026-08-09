@@ -8,10 +8,27 @@ Ce projet démontre la puissance de `pocket-tts`.
 
 ## 🚀 Utilisation
 
+App :snake: => **converter.py + faster_loading.py**
+
+On peut générer un fichier au format `.safetensors` avec le fichier `converter.py`.
+C'est ce qui prend le plus de temps. Ensuite, on peut lancer le fichier `faster_loading.py`.
+
+```
+python3 converter.py
+
+python3 faster_loading.py
+```
+
+---
+
 App :snake: => **voice_cloner.py**
 
 Fichier python maléable à souhait pour optimiser une voix clonée en fonction des besoins.
-Le rendu en mode standard est très bon.
+
+Le fichier `voice_cloner` en python permet d'optimiser la qualité de la voix clonée, 
+grâce aux différentes options de la commande de pocket-tts :
+
+`pocket-tts generate --quantize --text "text" --voice "file.safetensors" --language french_24l --temperature 0.5 --lsd-decode-steps 5 --output-path" result.wav`
 
 ```
 # Utilisation standard
@@ -94,7 +111,7 @@ pip freeze > requirements.txt
 
 ## 🤗 Huggingface
 
-- You need to install it to generate a clone of your voice !
+- On a besoin de huggingface pour pour se logger avant de cloner sa voix ! (gratuit)
 
 `pip install huggingface-hub`
 
