@@ -10,8 +10,9 @@ Ce projet démontre la puissance de `pocket-tts`.
 
 - App :snake: => **converter.py + faster_loading.py**
 
-On peut générer un fichier au format `.safetensors` avec le fichier `converter.py`.
-C'est ce qui prend le plus de temps. Ensuite, on peut lancer le fichier `faster_loading.py`.
+1. On peut générer un fichier au format `.safetensors` avec le fichier `converter.py`.
+C'est ce qui prend le plus de temps. 
+2. Ensuite, on peut lancer le fichier `faster_loading.py` pour cloner la voix avec un texte.
 
 ```
 python3 converter.py
