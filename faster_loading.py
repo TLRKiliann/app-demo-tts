@@ -3,7 +3,7 @@ import scipy.io.wavfile
 import sys
 
 try:
-    model = TTSModel.load_model("french_24l")
+    model = TTSModel.load_model("french_24l", temp=0.5, lsd_decode_steps=5, quantize=True)
     print("✅ Modèle chargé avec succès!")
 except Exception as e:
     print(f"❌ Erreur: {e}")
@@ -34,7 +34,8 @@ except Exception as e:
     sys.exit(1)
 
 try:
-    audio = model.generate_audio(model_state_copy, "Bonjour, je teste ma voix clonée")
+    audio = model.generate_audio(model_state_copy, "Bonjour, pouvez-vous effectuer"
+    "le versement à Friedrich comme convenu. En vous remerciant")
     print("✅ Audio généré")
     output_file = "output.wav"
     scipy.io.wavfile.write(output_file, model.sample_rate, audio.numpy())
