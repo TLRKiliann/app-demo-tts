@@ -10,13 +10,24 @@ Ce projet démontre la puissance de `pocket-tts`.
 
 - App :snake: => **converter.py + faster_loading.py**
 
-1. On peut générer un fichier au format `.safetensors` avec le fichier `converter.py`.
-C'est ce qui prend le plus de temps. 
+1. Avec le `converter.py`, on peut générer un fichier au format `.safetensors` avec le fichier original `ma_voix_originale.wav`.
 2. Ensuite, on peut lancer le fichier `faster_loading.py` pour cloner la voix avec un texte.
 
+La commande de base :
+
 ```
+pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.3 --lsd-decode-steps 5 --output-path new.wav
+```
+
+Pour les différentes options:
+
+`pocket-tts generate --help`
+
+```
+# Lancer en premier
 python3 converter.py
 
+# Lancer en deuxième
 python3 faster_loading.py
 ```
 
@@ -43,6 +54,7 @@ python3 voice_cloner.py ma_voix_originale.wav --text "Votre nouveau message ici"
 
 # Avec tous les paramètres
 python3 voice_cloner.py ma_voix_originale.wav \
+    --quantize # optimise par défaut dans ce fichier
     --text "Some words here..." \
     --language french_24l \
     --temperature 0.7 \
@@ -149,6 +161,8 @@ pip freeze > requirements.txt
 ```
 
 **⚡ Defaults options**
+
+`pocket-tts generate --help`
 
 - Quelle longeur de texte assure un rendu optimal avec Pocket TTS ? 
 
