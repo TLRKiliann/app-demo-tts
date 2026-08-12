@@ -10,13 +10,13 @@ Ce projet démontre la puissance de `pocket-tts`.
 
 - App :snake: => **converter.py + faster_loading.py**
 
-1. Avec le `converter.py`, on peut générer un fichier au format `.safetensors` avec le fichier original `ma_voix_originale.wav`.
+1. Avec le `converter.py`, on peut générer un fichier au format `.safetensors` avec le fichier original `test.wav`.
 2. Ensuite, on peut lancer le fichier `faster_loading.py` pour cloner la voix avec un texte.
 
 La commande de base :
 
 ```
-pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.3 --lsd-decode-steps 5 --output-path new.wav
+pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.7 --lsd-decode-steps 5 --output-path new.wav
 ```
 
 Pour les différentes options:
