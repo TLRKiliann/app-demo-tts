@@ -109,7 +109,7 @@ python3 -m venv pocket_env
 
 source pocket_env/bin/activate
 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install torch torchao --index-url https://download.pytorch.org/whl/cpu
 
 pip install pocket-tts
 
@@ -190,7 +190,7 @@ pip freeze > requirements.txt
 
 ## 🗑️ Uninstall
 
-`pip uninstall -y torch torchvision torchaudio pocket-tts torchao`
+`pip uninstall -y torch torchao pocket-tts`
 
 ---
 
