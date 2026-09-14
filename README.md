@@ -88,20 +88,6 @@ J'utilise `pip` ci-dessous pour les installations, mais vous pouvez vérifier av
 
 Si `pip` pointe vers `pyhton3` c'est bon, sinon utilisez `pip3`, plus moderne et sans ambiguïté.
 
-### Installation simple
-
-```
-python3 -m venv pocket_env
-
-source pocket_env/bin/activate
-
-git clone https://github.com/TLRKiliann/app-demo-tts.git
-
-pip install -r requirements.txt
-```
-
----
-
 ### Installation complète
 
 ```
@@ -111,7 +97,7 @@ source pocket_env/bin/activate
 
 pip install torch torchao --index-url https://download.pytorch.org/whl/cpu
 
-pip install pocket-tts
+pip install pocket-tts or pocket-tts[quantize] (ci-dessous)
 
 # ⚠️ Version of PyTorch 2.10+ ⚠️
 pip install pocket-tts[quantize] # Améliore la qualité !!!
