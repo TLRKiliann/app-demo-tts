@@ -2,31 +2,17 @@ from pocket_tts import TTSModel, export_model_state
 import scipy.io.wavfile
 import sys
 
-
-# temp=0.3 with test.safetensors | temp=0.5 with test.wav
 try:
-    model = TTSModel.load_model("french_24l", temp=0.3, quantize=True)
+    model = TTSModel.load_model(
+        "french_24l",
+        temp=0.7,
+        sampler_decode_steps=5,
+        quantize=True
+    )
     print("✅ Modèle chargé avec succès!")
 except Exception as e:
     print(f"❌ Erreur: {e}")
     sys.exit(1)
-
-"""
-# Export a voice state for fast loading later
-try:
-    model_state = model.get_state_for_audio_prompt("test.wav")
-    print("✅ État vocal extrait avec succès!")
-except Exception as e:
-    print(f"❌ Erreur extraction: {e}")
-    sys.exit(1)
-
-try:
-    export_model_state(model_state, "./test.safetensors")
-    print(f"✅ Model exporté avec succès!")
-except Exception as e:
-    print(f"❌ Erreur export: {e}")
-    sys.exit(1)
-"""
 
 # Later, load it quickly, this is quite fast as it's just reading the kvcache
 # from disk and doesn't do any others computations.

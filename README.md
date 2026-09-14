@@ -16,7 +16,7 @@ Ce projet démontre la puissance de `pocket-tts`.
 La commande de base :
 
 ```
-pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.7 --lsd-decode-steps 5 --output-path new.wav
+pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.7 --sampler-decode-steps 5 --output-path new.wav
 ```
 
 Pour les différentes options:
@@ -154,7 +154,7 @@ pip freeze > requirements.txt
 		--voice "untitled_fr.safetensors" 
 		--language french_24l 
 		--temperature 0.5 
-		--lsd-decode-steps 5 
+		--sampler-decode-steps 5 
 		--eos-threshold -5.0 
 		--frames-after-eos 5
 		--output-path ./last_test.wav
@@ -175,7 +175,7 @@ pip freeze > requirements.txt
     --config CONFIG_PATH: Path to custom config.yaml (for loading local model files). 
       Incompatible with --language.
 
-    --lsd-decode-steps LSD_DECODE_STEPS: Number of generation steps (default: 1)
+    --sampler-decode-steps LSD_DECODE_STEPS: Number of generation steps (default: 1)
 
     --temperature TEMPERATURE: Temperature for generation (default: 0.7)
 
