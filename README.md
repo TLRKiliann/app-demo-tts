@@ -43,7 +43,7 @@ l'échantillon vocal de base peut être nettoyé et l'option `--quantize` vient 
 Le fichier `voice_cloner` en python permet d'optimiser la qualité de la voix clonée, 
 grâce aux différentes options de la commande de pocket-tts :
 
-`pocket-tts generate --quantize --text "text" --voice "file.safetensors" --language french_24l --temperature 0.5 --lsd-decode-steps 5 --output-path" result.wav`
+`pocket-tts generate --quantize --text "text" --voice "file.safetensors" --language french_24l --temperature 0.5 --sampler-decode-steps 5 --output-path" result.wav`
 
 ```
 # Utilisation standard
@@ -95,15 +95,25 @@ python3 -m venv pocket_env
 
 source pocket_env/bin/activate
 
+# To fix on CPU
 pip install torch torchao --index-url https://download.pytorch.org/whl/cpu
+```
 
-pip install pocket-tts or pocket-tts[quantize] (ci-dessous)
+`pip install pocket-tts or pocket-tts[quantize]` (voir ci-dessous)
 
-# ⚠️ Version of PyTorch 2.10+ ⚠️
+```
+# ⚠️ Version of PyTorch 2.10+ required ⚠️
 pip install pocket-tts[quantize] # Améliore la qualité !!!
+
+torch==2.14.0+cpu
+torchao==0.18.0+cpu
 
 # To verify
 python -c "import pocket_tts; print('OK')"
+
+pip list
+pip show torch
+pip show torchao
 
 # Freeze requirements
 pip freeze > requirements.txt
