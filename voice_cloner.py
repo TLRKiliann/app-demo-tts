@@ -66,7 +66,7 @@ def generate_speech(voice_path, text, language, temperature, lsd_steps, output_p
         "--voice", voice_path,
         "--language", language,
         "--temperature", str(temperature),
-        "--sampler-decode-steps", str(lsd_steps),
+        "--lsd-decode-steps", str(lsd_steps),
         "--output-path", output_path
     ]
 

@@ -6,7 +6,7 @@ try:
     model = TTSModel.load_model(
         "french_24l",
         temp=0.7,
-        sampler_decode_steps=5,
+        lsd_decode_steps=5,
         quantize=True
     )
     print("✅ Modèle chargé avec succès!")
