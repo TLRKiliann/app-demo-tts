@@ -11,12 +11,12 @@ Ce projet démontre la puissance de `pocket-tts`.
 - App :snake: => **converter.py + faster_loading.py**
 
 1. Avec le `converter.py`, on peut générer un fichier au format `.safetensors` avec le fichier original `test.wav`.
-2. Ensuite, on peut lancer le fichier `faster_loading.py` pour cloner la voix avec un texte.
+2. Ensuite, on peut lancer le fichier `quick_generate.py` pour cloner la voix avec un texte.
 
 La commande de base :
 
 ```
-pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.7 --sampler-decode-steps 5 --output-path new.wav
+pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.7 --lsd-decode-steps 5 --output-path new.wav
 ```
 
 Pour les différentes options:
@@ -28,7 +28,7 @@ Pour les différentes options:
 python3 converter.py
 
 # Lancer en deuxième
-python3 faster_loading.py
+python3 quick_generate.py
 ```
 
 ---
@@ -43,7 +43,7 @@ l'échantillon vocal de base peut être nettoyé et l'option `--quantize` vient 
 Le fichier `voice_cloner` en python permet d'optimiser la qualité de la voix clonée, 
 grâce aux différentes options de la commande de pocket-tts :
 
-`pocket-tts generate --quantize --text "text" --voice "file.safetensors" --language french_24l --temperature 0.5 --sampler-decode-steps 5 --output-path" result.wav`
+`pocket-tts generate --quantize --text "text" --voice "file.safetensors" --language french_24l --temperature 0.5 --lsd-decode-steps 5 --output-path" result.wav`
 
 ```
 # Utilisation standard
@@ -148,10 +148,10 @@ pip freeze > requirements.txt
 	pocket-tts generate 
 		--text "Some words here..."
 		--voice "untitled_fr.safetensors" 
-		--language french_24l 
-		--temperature 0.5 
-		--sampler-decode-steps 5 
-		--eos-threshold -5.0 
+		--language french_24l
+		--temperature 0.5
+		--lsd-decode-steps 5
+		--eos-threshold -5.0
 		--frames-after-eos 5
 		--output-path ./last_test.wav
 ```
@@ -171,7 +171,7 @@ pip freeze > requirements.txt
     --config CONFIG_PATH: Path to custom config.yaml (for loading local model files). 
       Incompatible with --language.
 
-    --sampler-decode-steps LSD_DECODE_STEPS: Number of generation steps (default: 1)
+    --lsd-decode-steps LSD_DECODE_STEPS: Number of generation steps (default: 1)
 
     --temperature TEMPERATURE: Temperature for generation (default: 0.7)
 
