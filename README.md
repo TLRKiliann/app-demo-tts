@@ -46,7 +46,7 @@ python3 cloner_fr.py generate fichier.safetensors -t "Mon petit texte à génér
 
 ---
 
-## Optimisation
+## ⚡ Optimisation
 
 Grâce à ce lien: [https://podcast.adobe.com/en/enhance](https://podcast.adobe.com/en/enhance) 
 l'échantillon vocal de base peut être nettoyé et l'option `--quantize` vient optimiser la qualité du rendu.
