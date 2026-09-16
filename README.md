@@ -1,6 +1,6 @@
 # 🎤 Demo tts (text to speech)
 
-Ce projet démontre la puissance de `pocket-tts`. 
+Ce projet d'utilisation de `pocket-tts` sur `Raspberry Pi 5`.
 
 [https://github.com/kyutai-labs/pocket-tts](https://github.com/kyutai-labs/pocket-tts)
 
@@ -8,51 +8,21 @@ Ce projet démontre la puissance de `pocket-tts`.
 
 ## 🚀 Utilisation
 
-- App :snake: => **converter.py + faster_loading.py**
+App :snake: => **cloner_fr.py** ("french_24l")
 
-1. Avec le `converter.py`, on peut générer un fichier au format `.safetensors` avec le fichier original `test.wav`.
-2. Ensuite, on peut lancer le fichier `quick_generate.py` pour cloner la voix avec un texte.
-
-La commande de base :
+- commande de base :
 
 ```
 pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.7 --lsd-decode-steps 5 --output-path new.wav
 ```
 
-Pour les différentes options:
+- Voir les différentes options:
 
 `pocket-tts generate --help`
 
-```
-# Lancer en premier
-python3 converter.py
-
-# Lancer en deuxième
-python3 quick_generate.py
-```
-
----
-
-- App :snake: => **voice_cloner.py**
-
-Fichier python maléable à souhait pour optimiser une voix clonée en fonction des besoins.
-
-Grâce à ce lien: [https://podcast.adobe.com/en/enhance](https://podcast.adobe.com/en/enhance) 
-l'échantillon vocal de base peut être nettoyé et l'option `--quantize` vient optimiser la qualité du rendu.
-
-Le fichier `voice_cloner` en python permet d'optimiser la qualité de la voix clonée, 
-grâce aux différentes options de la commande de pocket-tts :
-
-`pocket-tts generate --quantize --text "text" --voice "file.safetensors" --language french_24l --temperature 0.5 --lsd-decode-steps 5 --output-path" result.wav`
+- Paramètres
 
 ```
-# Utilisation standard
-python3 voice_cloner.py ma_voix_originale.wav
-
-# Avec un message personnalisé
-python3 voice_cloner.py ma_voix_originale.wav --text "Votre nouveau message ici"
-
-# Avec tous les paramètres
 python3 voice_cloner.py ma_voix_originale.wav \
     --quantize # optimise par défaut dans ce fichier
     --text "Some words here..." \
@@ -60,13 +30,30 @@ python3 voice_cloner.py ma_voix_originale.wav \
     --temperature 0.7 \
     --lsd-steps 5 \
     --output ./mon_audio.wav \
-    --keep-voice
-
-# Processus du script
-mon_fichier_original.wav           # Source audio
-mon_fichier_original.safetensors   # Voice sample (improve quality)
-mon_fichier_original_generated.wav # Final result
 ```
+
+---
+
+- cloner_fr.py
+
+```
+# Lancer un clone (génère un fichier .safetensors)
+python3 cloner_fr.py clone fichier.wav
+
+# Lancer une synthèse vocale (utilisation de fichier.safetensors)
+python3 cloner_fr.py generate fichier.safetensors -t "Mon petit texte à générer..." -o output.wav
+```
+
+---
+
+## Optimisation
+
+Grâce à ce lien: [https://podcast.adobe.com/en/enhance](https://podcast.adobe.com/en/enhance) 
+l'échantillon vocal de base peut être nettoyé et l'option `--quantize` vient optimiser la qualité du rendu.
+
+- `quantize` permet d'améliorer la qualité du rendu audio grâce à `int8`.
+- `temperature 0.7` permet d'améliorer le timbre de la voix (émotion).
+- `lsd_decode_steps 5` améliore le traitement de la synthèse vocale.
 
 ## ✨ Générer une voix clonée avec le server
 
@@ -74,7 +61,7 @@ mon_fichier_original_generated.wav # Final result
 # Default params => localhost:8000
 pocket-tts serve --language french_24l
 
-# Otherwise
+# Autrement
 pocket-tts serve --host "localhost" --port 8080 --language french_24l
 ```
 
@@ -149,9 +136,9 @@ pip freeze > requirements.txt
 		--text "Some words here..."
 		--voice "untitled_fr.safetensors" 
 		--language french_24l
-		--temperature 0.5
+		--temperature 0.7
 		--lsd-decode-steps 5
-		--eos-threshold -5.0
+		--eos-threshold -4.0
 		--frames-after-eos 5
 		--output-path ./last_test.wav
 ```
