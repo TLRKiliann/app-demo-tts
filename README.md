@@ -1,6 +1,6 @@
 # 🎤 Demo tts (text to speech)
 
-Ce projet d'utilisation de `pocket-tts` sur `Raspberry Pi 5`.
+Script python pour l'utilisation de `pocket-tts`.
 
 [https://github.com/kyutai-labs/pocket-tts](https://github.com/kyutai-labs/pocket-tts)
 
