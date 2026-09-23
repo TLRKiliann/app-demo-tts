@@ -6,6 +6,7 @@ from pathlib import Path
 
 import scipy.io.wavfile
 from pocket_tts import TTSModel, export_model_state
+import torchao
 
 """
 Utilisation
@@ -22,7 +23,7 @@ DEFAULT_LANGUAGE = "french_24l"
 DEFAULT_TEMPERATURE = 0.7
 DEFAULT_LSD_STEPS = 5
 
-VALID_AUDIO_EXTENSIONS = {".wav",".mp3",".flac",".m4a",".ogg"}
+VALID_AUDIO_EXTENSIONS = {".wav"}
 
 def validate_audio_file(audio_path: Path) -> None:
     """Vérifie que le fichier audio existe et possède une extension valide."""
@@ -141,7 +142,7 @@ def generate_speech(
 
     audio = model.generate_audio(
         model_state=voice_state,
-        text_to_generate="... " + text,
+        text_to_generate=text,
         copy_state=True,
     )
 
@@ -316,7 +317,7 @@ def create_voice(args: argparse.Namespace) -> int:
     model = TTSModel.load_model(
         language=DEFAULT_LANGUAGE,
         temp=DEFAULT_TEMPERATURE,
-        lsd_decode_steps=DEFAULT_LSD_STEPS,
+        sampler_decode_steps=DEFAULT_LSD_STEPS,
         quantize=True,
     )
 
@@ -362,7 +363,7 @@ def generate_from_voice(args: argparse.Namespace) -> int:
     model = TTSModel.load_model(
         language=args.language,
         temp=args.temperature,
-        lsd_decode_steps=args.lsd_steps,
+        sampler_decode_steps=args.lsd_steps,
         quantize=True,
     )
 

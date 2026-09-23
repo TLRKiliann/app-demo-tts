@@ -1,12 +1,15 @@
+#!/usr/bin/env python3
+
 from pocket_tts import TTSModel, export_model_state
 import scipy.io.wavfile
 import sys
+import torchao
 
 try:
     model = TTSModel.load_model(
         "french_24l",
         temp=0.7,
-        lsd_decode_steps=5,
+        sampler_decode_steps=5,
         quantize=True
     )
     print("✅ Modèle chargé avec succès!")

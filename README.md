@@ -13,7 +13,7 @@ App :snake: => **cloner_fr.py** ("french_24l")
 - commande de base :
 
 ```
-pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.7 --lsd-decode-steps 5 --output-path new.wav
+pocket-tts generate --quantize --language french_24l --text "le texte ici..." --voice test.safetensors --temperature 0.7 --sampler-decode-steps 5 --output-path new.wav
 ```
 
 - Voir les différentes options:
@@ -23,12 +23,12 @@ pocket-tts generate --quantize --language french_24l --text "le texte ici..." --
 - Paramètres
 
 ```
-python3 voice_cloner.py ma_voix_originale.wav \
+python3 cloner_fr.py ma_voix_originale.wav \
     --quantize # optimise par défaut dans ce fichier
     --text "Some words here..." \
     --language french_24l \
     --temperature 0.7 \
-    --lsd-steps 5 \
+    --sampler-steps 5 \
     --output ./mon_audio.wav \
 ```
 
@@ -83,14 +83,8 @@ python3 -m venv pocket_env
 source pocket_env/bin/activate
 
 # To fix on CPU
-pip install torch torchao --index-url https://download.pytorch.org/whl/cpu
-```
-
-`pip install pocket-tts or pocket-tts[quantize]` (voir ci-dessous)
-
-```
 # ⚠️ Version of PyTorch 2.10+ required ⚠️
-pip install pocket-tts[quantize] # Améliore la qualité !!!
+pip install "pocket-tts[quantize]" --index-url https://download.pytorch.org/whl/cpu
 
 torch==2.14.0+cpu
 torchao==0.18.0+cpu
@@ -137,7 +131,7 @@ pip freeze > requirements.txt
 		--voice "untitled_fr.safetensors" 
 		--language french_24l
 		--temperature 0.7
-		--lsd-decode-steps 5
+		--sampler-decode-steps 5
 		--eos-threshold -4.0
 		--frames-after-eos 5
 		--output-path ./last_test.wav
@@ -158,7 +152,7 @@ pip freeze > requirements.txt
     --config CONFIG_PATH: Path to custom config.yaml (for loading local model files). 
       Incompatible with --language.
 
-    --lsd-decode-steps LSD_DECODE_STEPS: Number of generation steps (default: 1)
+    --sampler-decode-steps SAMPLER_DECODE_STEPS: Number of generation steps (default: 1)
 
     --temperature TEMPERATURE: Temperature for generation (default: 0.7)
 
